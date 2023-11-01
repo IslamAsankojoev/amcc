@@ -17,11 +17,32 @@
 }
 
 body {
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #040715;
+}
+
+.container{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 1200px;
+}
+
+.sticky-button{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  borderRadius: 50%;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justifyContent: center;
+  alignItems: center;
+  zIndex: 100;
+  fontSize: 20px;
+  fontWeight: 700;
+  transition: all 0.3s ease;
 }
