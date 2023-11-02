@@ -22,7 +22,7 @@ const First = () => {
           left: 0,
           height: '100vh',
           width: '100%',
-          backdropFilter: 'blur(3px)',
+          backdropFilter: 'blur(5px)',
         }}
       >
         <div className="container">

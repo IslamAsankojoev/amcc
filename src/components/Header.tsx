@@ -39,15 +39,15 @@ const Header = () => {
         alignItems: 'center',
         zIndex: 100,
       }}
-      className="h-14 md:h-20"
+      className="h-14 md:h-16"
     >
       <div className="container">
         <Space>
           <Image
             src="/logoAMCC.png"
             alt="site-logo"
-            width={180}
-            height={45}
+            width={scroll > 20 ? 140 : 170}
+            height={scroll > 20 ? 25 : 40}
             className="hidden md:block"
             style={{
               filter: 'drop-shadow(0px 0px 10px rgba(255,255,255,0.2))',
@@ -72,9 +72,9 @@ const Header = () => {
         onClick={scrollToTop}
         style={{
           opacity: scroll > 0 ? 1 : 0,
-          transform: scroll > 0 ? 'scale(1)' : 'scale(0)',
           backgroundColor: '#24263990',
         }}
+        show={scroll > 0}
       >
         <Image src="/up-arrow.png" alt="up-arrow" width={50} height={50} className='invert scale-50'/>
       </FixedButton>
