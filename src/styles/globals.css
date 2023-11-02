@@ -17,7 +17,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: rgb(var(--foreground-rgb));
   background: #040715;
 }
@@ -45,4 +45,5 @@ body {
   fontSize: 20px;
   fontWeight: 700;
   transition: all 0.3s ease;
+  background: #242639;
 }

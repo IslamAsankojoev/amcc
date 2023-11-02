@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <Space
+    <div
       style={{
         width: '100%',
         padding: '50px 0',
@@ -13,14 +13,15 @@ const Footer = () => {
       }}
     >
       <div className="container">
-          <p className="text-center text-xs md:text-lg">
-            @2023 AMCC - All Rights Reserved -{' '}
+          <p className="text-center text-xs md:text-lg ">
+            @2023 AMCC - All Rights Reserved 
+            <div className='md:inline-block block'> &nbsp;-&nbsp; </div>
             <a href="https://t.me/uclami" target="_blank" className="text-blue-500">
               made by Islam Asankojoev
             </a>
           </p>
       </div>
-    </Space>
+    </div>
   )
 }
 
