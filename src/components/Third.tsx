@@ -20,17 +20,17 @@ const Third = () => {
         </h1>
         <Carousel
           items={[
-            '/trades/trade1.jpg',
-            '/trades/trade2.jpg',
-            '/trades/trade5.jpg',
-            '/trades/trade6.jpg',
-            '/trades/trade7.jpg',
-            '/trades/trade8.jpg',
-            '/trades/trade9.jpg',
-            '/trades/trade10.jpg',
-            '/trades/trade11.jpg',
-            '/trades/trade13.jpg',
-            '/trades/trade14.jpg',
+            '/trades/trade1.webp',
+            '/trades/trade2.webp',
+            '/trades/trade5.webp',
+            '/trades/trade6.webp',
+            '/trades/trade7.webp',
+            '/trades/trade8.webp',
+            '/trades/trade9.webp',
+            '/trades/trade10.webp',
+            '/trades/trade11.webp',
+            '/trades/trade13.webp',
+            '/trades/trade14.webp',
           ]}
           show={{
             mobile: 2,
