@@ -116,6 +116,9 @@ const First = () => {
         }}
       >
         <Modal
+        classNames={{
+          footer: 'hidden',
+        }}
         width={400}
           open={modalOpen}
           onOk={() => {
