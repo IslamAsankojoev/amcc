@@ -20,6 +20,7 @@ body {
   /* overflow-x: hidden; */
   color: rgb(var(--foreground-rgb));
   background: #040715;
+  scroll-behavior: smooth;
 }
 
 .container{

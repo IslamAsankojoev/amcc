@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import FixedButton from './FixedButton'
 import { links } from '@/utils/constants'
 import { yanone_kaffeesatz } from '@/utils/fonts'
+import Menu from './Menu'
 
 const Header = () => {
   const [scroll, setScroll] = React.useState(0)
@@ -32,7 +33,7 @@ const Header = () => {
         background: scroll > 20 ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0)',
         transition: 'all 0.3s ease',
         position: 'fixed',
-        top:scroll > 0 ? 0 : 20,
+        top: scroll > 0 ? 0 : 20,
         left: 0,
         right: 0,
         display: 'flex',
@@ -42,29 +43,32 @@ const Header = () => {
       className="h-14 md:h-16"
     >
       <div className="container">
-        <Space>
-          <Image
-            src="/logoAMCC.png"
-            alt="site-logo"
-            width={scroll > 20 ? 140 : 170}
-            height={scroll > 20 ? 25 : 40}
-            className="hidden md:block"
-            style={{
-              filter: 'drop-shadow(0px 0px 10px rgba(255,255,255,0.2))',
-            }}
-          />
-          <Image
-            src="/logoAMCC.png"
-            alt="site-logo"
-            width={140}
-            height={25}
-            className="block md:hidden"
-            style={{
-              filter: 'drop-shadow(0px 0px 10px rgba(255,255,255,0.2))',
-            }}
-          />
-          <h2 className={`text-lg md:text-2xl ${yanone_kaffeesatz.className}`}>signals</h2>
-        </Space>
+        <span className="flex justify-between">
+          <Space>
+            <Image
+              src="/logoAMCC.png"
+              alt="site-logo"
+              width={scroll > 20 ? 140 : 170}
+              height={scroll > 20 ? 25 : 40}
+              className="hidden md:block"
+              style={{
+                filter: 'drop-shadow(0px 0px 10px rgba(255,255,255,0.2))',
+              }}
+            />
+            <Image
+              src="/logoAMCC.png"
+              alt="site-logo"
+              width={140}
+              height={25}
+              className="block md:hidden"
+              style={{
+                filter: 'drop-shadow(0px 0px 10px rgba(255,255,255,0.2))',
+              }}
+            />
+            <h2 className={`text-lg md:text-2xl ${yanone_kaffeesatz.className}`}>signals</h2>
+          </Space>
+          <Menu />
+        </span>
       </div>
       <FixedButton
         bottom={20}
@@ -76,7 +80,13 @@ const Header = () => {
         }}
         show={scroll > 0}
       >
-        <Image src="/up-arrow.png" alt="up-arrow" width={50} height={50} className='invert scale-50'/>
+        <Image
+          src="/up-arrow.png"
+          alt="up-arrow"
+          width={50}
+          height={50}
+          className="invert scale-50"
+        />
       </FixedButton>
       {/* <FixedButton bottom={20} left={20} link={links.telegram} style={{
       backgroundColor: '#0088cc',

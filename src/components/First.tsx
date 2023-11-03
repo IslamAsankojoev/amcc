@@ -37,17 +37,18 @@ const First = () => {
                 order: 1,
               }}
             >
-              <Space
-                direction="vertical"
+              <div
                 style={{
                   height: '100vh',
                   width: '100%',
                   zIndex: 100,
                   display: 'flex',
                   justifyContent: 'center',
+                  flexDirection: 'column',
+                  gap: 20,
                 }}
               >
-                <h2 className={`text-3xl md:text-4xl mb-6 ${yanone_kaffeesatz.className}`}>
+                <h2 className={`text-3xl md:text-4xl ${yanone_kaffeesatz.className}`}>
                   Добро пожаловать в мир &nbsp;{' '}
                   <span className={`${montserrat.className} font-bold`}>AMCC</span>
                 </h2>
@@ -57,15 +58,14 @@ const First = () => {
                   Мир надежного и прибыльного способа инвестирования. У нас есть одна весьма
                   привлекательная особенность:{' '}
                   <span className="text-green-500 font-semibold">каждый день ваш капитал растет на 3.8%</span>.
-                  <br />
-                  <br />
+                  <span className='mb-4 block'/>
                   Всё, что вам нужно сделать это следовать нашим сигналам. А несмотря на то, что в
                   выходные дни сигналы могут приходить не всегда, наши профессиональные трейдеры
                   гарантируют вашему успеху. Присоединяйтесь к нам и узнайте, как можно увеличить
                   свой капитал быстро и безопасно.
                 </p>
                 <br />
-                <Space size="large">
+                <Space size="large" wrap>
                   <a
                     href={links.telegram}
                     target='_blank'
@@ -81,7 +81,7 @@ const First = () => {
                     Узнать еще
                   </a>
                 </Space>
-              </Space>
+              </div>
             </Col>
             <Col
               xs={{

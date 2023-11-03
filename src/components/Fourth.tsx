@@ -5,7 +5,7 @@ import { roboto, yanone_kaffeesatz } from '@/utils/fonts'
 
 const Fourth = () => {
   return (
-    <div className="container">
+    <div id="withdrawals" className="container scroll-m-20">
       <Space
         direction="vertical"
         style={{
@@ -29,7 +29,7 @@ const Fourth = () => {
           show={{
             mobile: 2,
             tablet: 2,
-            desktop: 5,
+            desktop: 4,
           }}
         />
       </Space>

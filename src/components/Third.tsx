@@ -5,7 +5,7 @@ import { roboto, yanone_kaffeesatz } from '@/utils/fonts'
 
 const Third = () => {
   return (
-    <div className="container">
+    <div id="results" className="container scroll-m-20">
       <Space
         direction="vertical"
         style={{

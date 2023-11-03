@@ -5,7 +5,7 @@ import { montserrat, yanone_kaffeesatz } from '@/utils/fonts'
 
 const Second = () => {
   return (
-    <div className="container">
+    <div id="about" className="container scroll-m-10">
       <Space
         direction="vertical"
         style={{
