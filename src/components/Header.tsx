@@ -76,7 +76,7 @@ const Header = () => {
         onClick={scrollToTop}
         style={{
           opacity: scroll > 0 ? 1 : 0,
-          backgroundColor: '#24263990',
+          backgroundColor: '#000000',
         }}
         show={scroll > 0}
       >

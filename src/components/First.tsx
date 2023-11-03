@@ -1,10 +1,12 @@
-import { Col, Row, Space } from 'antd'
+import { Col, Modal, Row, Space } from 'antd'
 import React from 'react'
 import Image from 'next/image'
 import { montserrat, yanone_kaffeesatz } from '@/utils/fonts'
 import { links } from '@/utils/constants'
 
 const First = () => {
+  const [modalOpen, setModalOpen] = React.useState(false)
+
   return (
     <div
       style={{
@@ -52,31 +54,41 @@ const First = () => {
                   Добро пожаловать в мир &nbsp;{' '}
                   <span className={`${montserrat.className} font-bold`}>AMCC</span>
                 </h2>
-                <p
-                  className={`text-sm md:text-lg leading-6 md:leading-8 ${montserrat.className}`}
-                >
+                <p className={`text-sm md:text-sm leading-6 md:leading-8 ${montserrat.className}`}>
                   Мир надежного и прибыльного способа инвестирования. У нас есть одна весьма
                   привлекательная особенность:{' '}
-                  <span className="text-green-500 font-semibold">каждый день ваш капитал растет на 3.8%</span>.
-                  <span className='mb-4 block'/>
+                  <span className="text-green-500 font-semibold">
+                    каждый день ваш капитал растет на 3.8%
+                  </span>
+                  .
+                  <span className="mb-4 block" />
                   Всё, что вам нужно сделать это следовать нашим сигналам. А несмотря на то, что в
                   выходные дни сигналы могут приходить не всегда, наши профессиональные трейдеры
                   гарантируют вашему успеху. Присоединяйтесь к нам и узнайте, как можно увеличить
                   свой капитал быстро и безопасно.
+                  <br />
+                  <span
+                    className="text-blue-500 cursor-pointer"
+                    onClick={() => {
+                      setModalOpen(true)
+                    }}
+                  >
+                    Проверено NFA
+                  </span>
                 </p>
                 <br />
                 <Space size="large" wrap>
                   <a
                     href={links.telegram}
-                    target='_blank'
-                    className="bg-green-600 hover:bg-green-700 text-white hover:text-white font-bold p-4  rounded-full "
+                    target="_blank"
+                    className="bg-green-600 hover:bg-green-700 text-white hover:text-white font-semibold md:font-bold p-3 md:p-4 rounded-full inline-block"
                   >
                     Вступить в группу телеграм
                   </a>
                   <a
                     href="#"
-                    target='_blank'
-                    className="bg-red-600 text-white hover:text-white font-bold p-4  rounded-full "
+                    target="_blank"
+                    className="bg-red-600 text-white hover:text-white font-semibold md:font-bold p-3 md:p-4 rounded-full inline-block"
                   >
                     Узнать еще
                   </a>
@@ -103,6 +115,18 @@ const First = () => {
           zIndex: 100,
         }}
       >
+        <Modal
+        width={400}
+          open={modalOpen}
+          onOk={() => {
+            setModalOpen(false)
+          }}
+          onCancel={() => {
+            setModalOpen(false)
+          }}
+        >
+          <Image src="/nfa.jpeg" alt="nfa" width={400} height={600} />
+        </Modal>
         <br />
       </Space>
     </div>
