@@ -47,22 +47,23 @@ const Menu = () => {
           zIndex: 10000000,
         }}/>
         <Drawer 
+        onClose={onClose}
         size='default'
         title={
-          <div className='flex justify-between items-center text-white'>
-            <span>Меню</span>
-            <CloseOutlined onClick={onClose} className='text-xl mr-2'/>
+          <div className='flex justify-between items-center text-white px-3'>
+            <span className='text-xl'>Меню</span>
+            <CloseOutlined onClick={onClose} className='text-xl'/>
           </div>
         } placement="right" open={open} className='bg-[#04040ec4] backdrop-blur-2xl' classNames={
           {
-            header: '[&>div>button]:hidden',
+            header: '[&>div>button]:hidden pt-8',
           }
         }>
           {menu.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="block py-2 px-4 text-sm"
+              className="block py-2 px-4 text-lg"
               onClick={onClose}
             >
               {item.title}
