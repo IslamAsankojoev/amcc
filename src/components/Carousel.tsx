@@ -159,7 +159,15 @@ const Carousel: React.FC<CarouselProps> = (props) => {
   return (
     <Slider
       {...settings}
-      className="[&>.slick-list>.slick-track]:flex [&>.slick-list>.slick-track]:gap-3"
+      className="
+      [&>.slick-list>.slick-track]:flex 
+      [&>.slick-list>.slick-track]:gap-3 
+      [&>.slick-dots>li>button]:before:bg-slate-50 
+      [&>.slick-dots>li>button]:before:w-2
+      [&>.slick-dots>li>button]:before:h-2
+      [&>.slick-dots>li>button]:before:rounded-full
+      [&>.slick-dots]:-bottom-10
+      "
       ref={slider}
     >
       {items?.map((child, id) => (
