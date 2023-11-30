@@ -21,8 +21,9 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #040715;
 }
+
 html{
-  scroll-behavior: smooth;
+  scroll-behavior: smooth!important;
 }
 
 .container{
