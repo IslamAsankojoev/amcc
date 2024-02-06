@@ -86,7 +86,7 @@ const First = () => {
                     Вступить в группу телеграм
                   </a>
                   <a
-                    href="#"
+                    href={links.telegram}
                     target="_blank"
                     className="bg-red-600 text-white hover:text-white font-semibold md:font-bold p-3 md:p-4 rounded-full inline-block"
                   >
@@ -116,10 +116,10 @@ const First = () => {
         }}
       >
         <Modal
-        classNames={{
-          footer: 'hidden',
-        }}
-        width={400}
+          classNames={{
+            footer: 'hidden',
+          }}
+          width={400}
           open={modalOpen}
           onOk={() => {
             setModalOpen(false)
